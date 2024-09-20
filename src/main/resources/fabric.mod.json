@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "bedrockpatches",
+  "version": "${version}",
+
+  "name": "ViaBedrock patches.",
+  "description": "ViaFabricPlus addition allow some extra actions in ViaBedrock.",
+  "authors": [
+    "Oryxel"
+  ],
+
+  "license": "CC0-1.0",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "org.oryxel.bedrockpatch.BedrockPatchMod"
+    ]
+  },
+  "mixins": [
+    "bedrockpatch.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.15.10",
+    "minecraft": "~1.21",
+    "java": ">=21",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
