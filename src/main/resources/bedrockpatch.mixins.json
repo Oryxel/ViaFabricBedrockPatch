@@ -6,7 +6,8 @@
   "mixins": [
   ],
   "client": [
-    "ServerAddressMixin"
+    "ServerAddressMixin",
+    "viabedrock.ClientPlayerBedrockMixin"
   ],
   "injectors": {
     "defaultRequire": 1
