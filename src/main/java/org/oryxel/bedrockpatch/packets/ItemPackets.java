@@ -2,6 +2,7 @@ package org.oryxel.bedrockpatch.packets;
 
 import com.viaversion.viaversion.api.type.Types;
 import com.viaversion.viaversion.protocols.v1_20_3to1_20_5.packet.ServerboundPackets1_20_5;
+import com.viaversion.viaversion.protocols.v1_21to1_21_2.packet.ServerboundPackets1_21_2;
 import net.raphimc.viabedrock.api.model.container.player.InventoryContainer;
 import net.raphimc.viabedrock.protocol.BedrockProtocol;
 import net.raphimc.viabedrock.protocol.ServerboundBedrockPackets;
@@ -15,7 +16,7 @@ import net.raphimc.viabedrock.protocol.types.BedrockTypes;
 public class ItemPackets {
 
     public static void register(final BedrockProtocol protocol) {
-        protocol.registerServerbound(ServerboundPackets1_20_5.USE_ITEM, ServerboundBedrockPackets.INVENTORY_TRANSACTION, wrapper -> {
+        protocol.registerServerbound(ServerboundPackets1_21_2.USE_ITEM, ServerboundBedrockPackets.INVENTORY_TRANSACTION, wrapper -> {
             final EntityTracker entityTracker = wrapper.user().get(EntityTracker.class);
             final InventoryContainer inventoryContainer = wrapper.user().get(InventoryTracker.class).getInventoryContainer();
 
